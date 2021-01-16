@@ -1,0 +1,46 @@
+GET http://localhost:5000/api/posts HTTP/1.1
+
+###
+
+GET http://localhost:5000/api/posts/4 HTTP/1.1
+
+###
+
+GET http://localhost:5000/api/posts/4/comments HTTP/1.1
+
+###
+
+POST http://localhost:5000/api/posts HTTP/1.1
+content-type: application/json
+
+{
+    "title": "A wizard is never late, Frodo Baggins. Nor is he early. He arrives precisely when he means to.",
+    "contents": "Gandalf the Grey"
+}
+
+###
+
+POST http://localhost:5000/api/posts/1/comments HTTP/1.1
+content-type: application/json
+
+{
+    "text": "You can not hide, I see you! There is no life, after me. Only!.. Death!"
+}
+
+###
+
+GET http://localhost:5000/api/posts/1/comments HTTP/1.1
+
+###
+
+DELETE http://localhost:5000/api/posts/11 HTTP/1.1
+
+###
+
+PUT http://localhost:5000/api/posts/10 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "I think we should get off the road. Get off the road! Quick!",
+    "contents": "Not the beard!"
+}
